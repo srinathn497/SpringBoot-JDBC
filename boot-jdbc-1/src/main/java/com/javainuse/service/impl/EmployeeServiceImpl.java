@@ -17,18 +17,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	EmployeeDao employeeDao;
 
-	
-	  @Override 
-	  public void insertEmployee(Employee employee) 
-	  {
-	  employeeDao.insertEmployee(employee); 
-	  }
-	  
-	  @Override 
-	  public void insertEmployees(List<Employee> employees) 
-	  {
-	  employeeDao.insertEmployees(employees); 
-	  }
+	/*
+	 * @Override public void insertEmployee(Employee employee) {
+	 * employeeDao.insertEmployee(employee); }
+	 * 
+	 * @Override public void insertEmployees(List<Employee> employees) {
+	 * employeeDao.insertEmployees(employees); }
+	 */
 	 
 
 	public void getAllEmployees() 
@@ -36,17 +31,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 		List<Employee> employees = employeeDao.getAllEmployees();
 		for (Employee employee : employees) {
 			System.out.println(employee.toString());
-			System.out.println("end");
+			//System.out.println("end");
 		}
 	}
 
 	
-	  @Override 
-	  public void getEmployeeById(String empId) {
-	  System.out.println("end"); 
-	  Employee employee = employeeDao.getEmployeeById(empId); 
-	  System.out.println(employee); 
-	  }
+	/*
+	 * @Override public void getEmployeeById(String empId) {
+	 * System.out.println("end"); Employee employee =
+	 * employeeDao.getEmployeeById(empId); System.out.println(employee); }
+	 */
 	 
 
 }

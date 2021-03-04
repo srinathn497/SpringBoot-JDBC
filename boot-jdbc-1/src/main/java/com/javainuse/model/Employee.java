@@ -1,14 +1,54 @@
 package com.javainuse.model;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
-//@Component
+import oracle.sql.DATE;
+
+@Component
 public class Employee {
 
-	public String getEmpno() {
+	private  Number empno;
+	private String Ename;
+	private String Job;
+	private Number Mgr;
+	@DateTimeFormat(pattern="yy-MMM-dd")
+	private Date hiredate;
+	private Number sal;
+	private Number comm;
+	private Number deptno;
+	
+	public Number getDeptno() {
+		return deptno;
+	}
+	public void setDeptno(Number deptno) {
+		this.deptno = deptno;
+	}
+	public Number getComm() {
+		return comm;
+	}
+	public void setComm(Number comm) {
+		this.comm = comm;
+	}
+	public Number getSal() {
+		return sal;
+	}
+	public void setSal(Number sal) {
+		this.sal = sal;
+	}
+	public Number getMgr() {
+		return Mgr;
+	}
+	public void setMgr(Number mgr) {
+		Mgr = mgr;
+	}
+	public Number getEmpno() {
 		return empno;
 	}
-	public void setEmpno(String empno) {
+	public void setEmpno(Number empno) {
 		this.empno = empno;
 	}
 	public String getEname() {
@@ -17,56 +57,32 @@ public class Employee {
 	public void setEname(String ename) {
 		Ename = ename;
 	}
-	@Override
-	public String toString() {
-		return "Employee [empno=" + empno + ", Ename=" + Ename + ", job=" + job + ", mgr=" + mgr + ", hiredate="
-				+ hiredate + ", sal=" + sal + ", comm=" + comm + ", deptno=" + deptno + "]";
-	}
 	public String getJob() {
-		return job;
+		return Job;
 	}
 	public void setJob(String job) {
-		this.job = job;
+		Job = job;
 	}
-	public String getMgr() {
-		return mgr;
-	}
-	public void setMgr(String mgr) {
-		this.mgr = mgr;
-	}
-	public String getHiredate() {
+
+	
+	
+	 
+	public Date getHiredate() {
 		return hiredate;
 	}
-	public void setHiredate(String hiredate) {
+	public void setHiredate(Date hiredate) {
 		this.hiredate = hiredate;
 	}
-	public String getSal() {
-		return sal;
+
+	
+	@Override
+	public String toString() {
+		return "Employee [empno=" + empno + ", Ename=" + Ename + ", Job=" + Job + ", Mgr=" + Mgr + ", hiredate="
+				+ hiredate + ", sal=" + sal + ", comm=" + comm + ", deptno=" + deptno + "]";
 	}
-	public void setSal(String sal) {
-		this.sal = sal;
-	}
-	public String getComm() {
-		return comm;
-	}
-	public void setComm(String comm) {
-		this.comm = comm;
-	}
-	public String getDeptno() {
-		return deptno;
-	}
-	public void setDeptno(String deptno) {
-		this.deptno = deptno;
-	}
-	private String empno;
-	private String Ename;
-	private String job;
-	private String mgr;
-	private String hiredate;
-	private String sal;
-	private String comm;
-	private String deptno;
 	
 
 
+
+	
 }
