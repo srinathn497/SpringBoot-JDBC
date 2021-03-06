@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public class Student {
 
 	private String stndno;
+	private int no;
 	public String getStndno() {
 		return stndno;
 	}
