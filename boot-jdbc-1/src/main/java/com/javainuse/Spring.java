@@ -16,18 +16,26 @@ public class Spring {
 	/*
 	 * @Autowired EmployeeService employeeService;
 	 */
-	  @Autowired
-	  Student st;
 	
-	  	public static void main(String[] args) {
+	  @Autowired Student st;
+	 
+	
+	  	public void setSt(Student st) {
+		this.st = st;
+		st.getStndname();
+		st.toString();
+	}
+
+
+		public static void main(String[] args) {
 			
 		System.out.println("spring main class");
 		ConfigurableApplicationContext context = SpringApplication.run(Spring.class, args);
 		EmployeeService employeeService = context.getBean(EmployeeService.class);
 		Student st = context.getBean(Student.class);
-		st.getStndname();
+		//st.getStndname();
 		System.out.println("spring main class+"+ st.toString() );
-		employeeService.getAllEmployees();
+		//employeeService.getAllEmployees();
 		//List<Employee> employees = new ArrayList<>();
 		//employeeService.getAllEmployees();
 		//employeeService.getEmployeeById(emp1.getEmpId());
